@@ -38,10 +38,10 @@ def main(number, start, stop, step):
     y1, y2 = list(zip(*computation_time_lists(naive, optimized, x)))
     plt.figure(figsize=(10,8))
     plt.title('Project Euler - pb1')
-    plt.plot(x, y1, '-o', label='naive')
-    plt.plot(x, y2, '-ro', label='optimized')
+    plt.plot(x, y1, '-o', label='naive', clip_on=False)
+    plt.plot(x, y2, '-ro', label='optimized', clip_on=False)
     plt.xlabel('Edge Number') ; plt.ylabel('Computation Time (s)')
-    plt.minorticks_on()
+    plt.minorticks_on() ; plt.xlim((0,10**9)) ; plt.ylim(ymin=0)
     plt.grid(which='major', alpha=0.8) ; plt.grid(which='minor', alpha=0.2); plt.legend()
     plt.savefig('pb1.png')
 
