@@ -34,7 +34,7 @@ def answer(N, sum_two_abundants):
     return res
 
 @click.command()
-@click.option('--number', '-n', type=int, help='Number', required=True)
+@click.option('--number', '-n', type=int, default=28123, help='Number', required=False)
 def main(number):
     a = abundant_numbers(number)
     sta = sum_two_abundants(number, a)
