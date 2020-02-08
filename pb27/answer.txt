@@ -1,0 +1,11 @@
+1. On remarque que y1 : N -> N, n -> n²+n+41 génère 40 nombres premiers, de 41 à 1601, pour n allant de 0 à 39 (cf. pdf)
+2. On remarque que y2 : N -> N, n -> n²-79n+41 = y1(n-40). Autrement dit, il s'agit de la fonction y1 à laquelle on a aplliqué un
+décallage de 40. y2 génère 80 nombres premiers, (ceux générés par y1 + les 40 du décallage). Cela est particulièrement visible sur le pdf
+ou sur la figure.
+3. Sachant cela, on pose x entier le décallage. On obtient :
+(n-x)² + (n-x) + 41 = n² + n(1 - 2x) + (x² - x + 41).
+Autrement dit, a = (1 - 2x) et b = (x² - x + 41).
+4. Selon les conditions de l'énoncé, |a| < 1000 et |b| <= 1000. On obtient ainsi -30 <= x <= 31.
+5. En prenant x = 31, il advient que a = -61 et b = 971 dont le produit donne -59 231.
+
+PS. A noter que ce décallage de 31 génère 40 (ceux de l'équation y1) + 31 (le décallage) = 71 nombres premiers.
